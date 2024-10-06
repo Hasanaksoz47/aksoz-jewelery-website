@@ -354,7 +354,7 @@
         #geri {
             width: 300px;
             position: absolute;
-            bottom: 75px;
+            bottom: 110px;
             right: 30px;
             transition: background-color 0.3s, transform 0.3s;
             background-color: #218838;
@@ -364,7 +364,7 @@
             font-size: 16px;
             border-radius: 6px;
             cursor: pointer;
-            animation: jump 1.5s ease infinite;
+            animation: jump 1s ease infinite;
         }
 
         @keyframes jump {
@@ -426,8 +426,7 @@
         .container h1 {
             font-size: 24px;
             color: #0d551d;
-            margin-bottom: 10px;
-            display: none;
+            margin-bottom: 30px;
         }
 
         .container h2 {
@@ -534,9 +533,9 @@
     <nav class="nav" id="nav">
         <ul>
             <li><a href="#ana" onclick="anagetir()">Anasayfa</a></li>
-            <li><a href="#urunler">Ürünler</a></li>
+            <li><a href="#urunler" onclick="urungetir()">Ürünler</a></li>
             <li><a href="#" onclick="hakkgetir()">Hakkımızda</a></li>
-            <li><a href="#contact">İletişim</a></li>
+            <li><a href="#contact" onclick="iletegetir()">İletişim</a></li>
         </ul>
     </nav>
 
@@ -547,6 +546,7 @@
             alt="WhatsApp İkonu">
     </a>
     <div class="ana" id="ana">
+        <br>
         <div class="marquee-container">
             <div class="marquee-text">Değerli olan ürünlerimiz değil SİZ'siniz</div>
         </div>
@@ -808,6 +808,7 @@
 
     </div>
     <section class="cart" id="cart">
+        <br>
         <h2>Sepet</h2>
         <ul id="cart-items"></ul>
         <p>Toplam : <strong id="total-price">0</strong> TL</p>
@@ -815,6 +816,7 @@
     </section>
 
     <div class="container" id="container">
+        <br>
         <h1>Hakkımızda</h1>
         <p>
             <span class="highlight">Aksoz Gold</span> işletmesi, Türkiye'nin Mardin Midyat şehrinde
@@ -852,6 +854,17 @@
         <p>&copy; 2024 Aksoz Kuyumculuk. Tüm hakları saklıdır.</p>
     </footer>
     <script>
+        function urungetir(){
+            document.getElementById("ana").style.display = "block";
+            document.getElementById("cart").style.display = "none";
+            document.getElementById("container").style.display = "none";
+        }
+        function iletegetir(){
+            document.getElementById("contact").style.display="block";
+            document.getElementById("ana").style.display = "block";
+            document.getElementById("cart").style.display = "none";
+            document.getElementById("container").style.display = "none";
+        }
         function anagetir() {
             document.getElementById("ana").style.display = "block";
             document.getElementById("cart").style.display = "none";
